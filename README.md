@@ -11,6 +11,9 @@ This project is a microservices-based RESTful API application consisting of thre
 3. **Service Registry**  
     The Service Registry, implemented using Eureka and Feign, acts as an interface between the Question Service and the Quiz Service. It ensures that the services remain decoupled while enabling seamless communication between them.
 
+4. **API Gateway**
+    The API Gateway acts as the primary interface to the client, further abstracting the main services.
+
 ### Key Features
 - Microservices architecture for modularity and scalability.
 - Dynamic quiz generation based on user preferences.
