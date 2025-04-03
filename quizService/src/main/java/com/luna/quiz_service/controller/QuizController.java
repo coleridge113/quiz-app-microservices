@@ -5,6 +5,9 @@ import com.luna.quiz_service.model.Quiz;
 import com.luna.quiz_service.model.QuizDto;
 import com.luna.quiz_service.model.Response;
 import com.luna.quiz_service.service.QuizService;
+
+import jakarta.ws.rs.Path;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,9 +32,9 @@ public class QuizController {
         return quizService.getQuizById(id);
     }
 
-    @GetMapping("/getQuestions/{id}")
-    public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(@PathVariable int id){
-        return quizService.getQuizQuestions(id);
+    @PostMapping("/getQuestions/{quizId}")
+    public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(@PathVariable Integer quizId){
+        return quizService.getQuizQuestions(quizId);
     }
 
     @PostMapping("create")

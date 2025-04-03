@@ -69,48 +69,18 @@ public class QuizService {
         }
     }
 
-    public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(int id) {
-        // Optional<Quiz> quiz = quizDao.findById(id);
+    public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(Integer quizId) {
+        Quiz quiz = quizDao.findById(quizId).get();
 
-        // if(quiz.isEmpty()){
-        //     return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        // }
+        List<Integer> questionIds = quiz.getQuestionIds();
 
-        // List<QuestionWrapper> questionsForUser = quiz.get().getQuestionIds().stream()
-        //     .map(q -> new QuestionWrapper(
-        //             q.getId(),
-        //             q.getQuestionTitle(),
-        //             q.getOption1(),
-        //             q.getOption2(),
-        //             q.getOption3(),
-        //             q.getOption4()
-        //     ))
-        //     .collect(Collectors.toCollection(ArrayList::new));
+        List<QuestionWrapper> questions = quizInterface.getQuestionsFromId(questionIds).getBody();   
 
-        // Collections.shuffle(questionsForUser);
-
-        return new ResponseEntity<>(null, HttpStatus.OK);
+        return new ResponseEntity<>(questions, HttpStatus.OK);
     }
 
     public ResponseEntity<Integer> calculateResult(Integer id, List<Response> responses) {
-        // Optional<Quiz> quiz = quizDao.findById(id);
-        // if (quiz.isEmpty()) {
-        //     return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        // }
-    
-        // List<Question> questions = quiz.get().getQuestions();
-    
-        // Map<Integer, Question> questionMap = questions.stream()
-        //         .collect(Collectors.toMap(Question::getId, question -> question));
-    
-        int correctAnswers = 0;
-    
-        // for (Response response : responses) {
-        //     Question question = questionMap.get(response.getId()); 
-        //     if (question != null && response.getAnswer().equals(question.getRightAnswer())) {
-        //         correctAnswers++;
-        //     }
-        // }
+        int correctAnswers = quizInterface.getScore(responses).getBody();
     
         return new ResponseEntity<>(correctAnswers, HttpStatus.OK);
     }
