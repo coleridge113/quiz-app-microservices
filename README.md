@@ -1,6 +1,6 @@
 # Quiz App
 
-This project is a microservices-based application consisting of three sub-projects:
+This project is a microservices-based RESTful API application consisting of three sub-projects:
 
 1. **Question Service**  
     The Question Service is responsible for storing and managing quiz questions. It provides an API for the Quiz Service to access questions based on specified categories and the desired number of questions.
@@ -17,17 +17,6 @@ This project is a microservices-based application consisting of three sub-projec
 - Service discovery and communication using Eureka and Feign.
 
 ### Technologies Used
-- **Spring Boot** for building microservices.
+- **Java Spring Boot** for building microservices.
 - **Eureka** for service discovery.
 - **Feign** for declarative REST client communication.
-
-### How to Run
-1. Start the Service Registry.
-2. Start the Question Service.
-3. Start the Quiz Service.
-4. Access the Quiz Service to generate quizzes.
-
-### Future Enhancements
-- Add user authentication and authorization.
-- Implement a leaderboard for quiz results.
-- Enhance question categorization and filtering.
