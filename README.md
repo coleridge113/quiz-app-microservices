@@ -1,6 +1,6 @@
 # Quiz App
 
-This project is a microservices-based RESTful API application consisting of three sub-projects:
+This project is a microservices-based RESTful API / web application consisting of five sub-projects:
 
 1. **Question Service**  
     The Question Service is responsible for storing and managing quiz questions. It provides an API for the Quiz Service to access questions based on specified categories and the desired number of questions.
