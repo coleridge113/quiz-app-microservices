@@ -14,6 +14,9 @@ This project is a microservices-based RESTful API application consisting of thre
 4. **API Gateway**
     The API Gateway acts as the primary interface to the client, further abstracting the main services.
 
+5. **User Service**
+    The User Service, the front end component, allows a user to view the available quizzes and answer them.
+
 ### Key Features
 - Microservices architecture for modularity and scalability.
 - Dynamic quiz generation based on user preferences.
