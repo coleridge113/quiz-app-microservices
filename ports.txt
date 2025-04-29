@@ -1,0 +1,6 @@
+
+api-gateway = 8082
+questionService = 8081
+quizService = 8083
+serviceReg = 8761
+userService = 8084

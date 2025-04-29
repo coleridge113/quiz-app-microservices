@@ -1,6 +1,6 @@
 # Quiz App
 
-This project is a microservices-based RESTful API / web application consisting of five sub-projects:
+This project is a microservices-based RESTful API / web application consisting of six sub-projects:
 
 1. **Question Service**  
     The Question Service is responsible for storing and managing quiz questions. It provides an API for the Quiz Service to access questions based on specified categories and the desired number of questions.
@@ -15,14 +15,19 @@ This project is a microservices-based RESTful API / web application consisting o
     The API Gateway acts as the primary interface to the client, further abstracting the main services.
 
 5. **User Service**
-    The User Service, the front end component, allows a user to view the available quizzes and answer them.
+    The User Service, the front end component using Thymeleaf, allows a user to view the available quizzes and answer them.
+
+6. **User Service (Vite+React)**
+    The User Service, the front end component using rewritten in React.js
 
 ### Key Features
 - Microservices architecture for modularity and scalability.
-- Dynamic quiz generation based on user preferences.
 - Service discovery and communication using Eureka and Feign.
 
 ### Technologies Used
 - **Java Spring Boot** for building microservices.
 - **Eureka** for service discovery.
+- **RESTful APIs** for inter-service communication
 - **Feign** for declarative REST client communication.
+- **Vite + React** for an alternative front end.
+- **TailwindCSS** for the design of the React project. 
