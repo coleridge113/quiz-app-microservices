@@ -1,4 +1,4 @@
-import { useParams, useLocation, BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { useLocation, BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import api from './utilities/api';
 
@@ -199,7 +199,7 @@ function SubmitDialog({ score, onClose }){
   return (
     <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50'>
       <div className='bg-white p-8 rounded shadow-lg text-center'>
-        <h2 className='text-2xl font-bold mb-4'>Quiz Submitted!</h2>
+        <h2 className='text-2xl font-bold mb-4'>Congratulations!</h2>
         <p className='text-lg mb-6'>Your score is: <span className='font-bold'>{score}</span></p>
         <button onClick={onClose} className='px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700'>Close</button>
       </div>
