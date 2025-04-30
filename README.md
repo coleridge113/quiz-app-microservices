@@ -17,7 +17,7 @@ This project is a microservices-based RESTful API / web application consisting o
 5. **User Service**
     The User Service, the front end component using Thymeleaf, allows a user to view the available quizzes and answer them.
 
-6. **User Service (Vite+React)**
+6. **User Service 2 (Vite+React)**
     The User Service, the front end component using rewritten in React.js
 
 ### Key Features
@@ -27,7 +27,8 @@ This project is a microservices-based RESTful API / web application consisting o
 ### Technologies Used
 - **Java Spring Boot** for building microservices.
 - **Eureka** for service discovery.
-- **RESTful APIs** for inter-service communication
+- **RESTful APIs** for inter-service communication.
 - **Feign** for declarative REST client communication.
 - **Vite + React** for an alternative front end.
-- **TailwindCSS** for the design of the React project. 
+- **TailwindCSS** for the design of the React project.
+- **Docker** for containerizing and deploying the microservices.
