@@ -12,14 +12,17 @@ public class WebFluxCorsConfig {
 
     @Bean
     CorsWebFilter corsWebFilter() {
+        System.out.println("CORS WebFilter is being initialized...");
         CorsConfiguration corsConfig = new CorsConfiguration();
-        corsConfig.addAllowedOrigin("http://localhost:5173");; // Allow all origins
+        corsConfig.setAllowedOrigins(List.of("http://localhost:8084", "http://localhost:5174")); // Allow all origins
         corsConfig.setAllowedMethods(List.of("GET", "POST")); // Allow all HTTP methods
         corsConfig.setAllowedHeaders(List.of("*")); // Allow all headers
         corsConfig.setAllowCredentials(true); // Allow credentials (e.g., cookies)
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", corsConfig);
+
+        // System.out.println("CORS CONFIG ALLOWED ORIGINS: " + corsConfig.getAllowedOrigins());
 
         return new CorsWebFilter(source);
     }

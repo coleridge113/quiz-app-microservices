@@ -17,6 +17,17 @@ export default function App() {
       }
     }
 
+    // const fetchSample = async() => {
+    //   try{
+    //     const response = await axios.get("http://localhost:8082/test/cors");
+    //     console.log(response.data);
+    //   } catch (error) {
+    //     console.error(error)
+    //   }
+
+    // }
+    
+    // fetchSample();
     fetchData();
   }, []);
 

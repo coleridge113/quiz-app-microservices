@@ -88,6 +88,16 @@ services:
       - eureka-server
     networks:
       - quiz-network
+
+  user-service:
+    build:
+      context: ./user-service
+      dockerfile: Dockerfile
+    container_name: user-service-container
+    ports:
+      - 8084:80
+    networks:
+      - quiz-network
   
     
 networks:
