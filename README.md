@@ -26,6 +26,6 @@ This project is a microservices-based RESTful API / web application consisting o
 - **Eureka** for service discovery.
 - **RESTful APIs** for inter-service communication.
 - **Feign** for declarative REST client communication.
-- **Vite + React** for an alternative front end.
+- **Vite + React** for the front end.
 - **TailwindCSS** for the design of the React project.
 - **Docker** for containerizing and deploying the microservices.
