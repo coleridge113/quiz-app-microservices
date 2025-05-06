@@ -14,11 +14,8 @@ This project is a microservices-based RESTful API / web application consisting o
 4. **API Gateway**
     The API Gateway acts as the primary interface to the client, further abstracting the main services.
 
-5. **User Service**
-    The User Service, the front end component using Thymeleaf, allows a user to view the available quizzes and answer them.
-
-6. **User Service 2 (Vite+React)**
-    The User Service, the front end component using rewritten in React.js
+5. **User Service (Vite+React)**
+    The User Service, the front end component rewritten in React.js, allows a user to view the available quizzes and answer them.
 
 ### Key Features
 - Microservices architecture for modularity and scalability.
